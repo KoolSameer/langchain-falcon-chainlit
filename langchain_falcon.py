@@ -14,8 +14,9 @@ HUGGINGFACEHUB_API_TOKEN = os.getenv("HUGGINGFACE_API_TOKEN")
 repo_id = "tiiuae/falcon-7b-instruct"
 llm = HuggingFaceHub(huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN, 
                      repo_id=repo_id, 
-                     model_kwargs={"temperature":0.7, "max_new_tokens":500})
+                     model_kwargs={"temperature":0.7, "max_new_tokens":2500})
 
+# chainlit run langchain_falcon.py -w
 
 template = """
 You are a helpful AI assistant and provide the answer for the question asked politely.
